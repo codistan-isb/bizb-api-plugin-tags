@@ -47,6 +47,8 @@ type Tag implements Node & Deletable {
 
   "The date and time at which this tag was last updated"
   updatedAt: DateTime!
+   "Tag description"
+  description: String
 }
 
 extend type Query {

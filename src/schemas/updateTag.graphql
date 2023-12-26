@@ -30,6 +30,8 @@ input UpdateTagInput {
 
   "The tag slug. If left blank, the name will be slugified and saved as the slug"
   slug: String
+   "Tag description"
+  description: String
 }
 
 "Response payload for `updateTag` mutation"
