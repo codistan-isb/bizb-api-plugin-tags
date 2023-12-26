@@ -12,6 +12,9 @@ input AddTagInput {
   "Whether the tag is visible"
   isVisible: Boolean!
 
+  "Tag description"
+  description: String
+
   "Tag metafields"
   metafields: [MetafieldInput]
 
@@ -39,8 +42,5 @@ type AddTagPayload {
 
 extend type Mutation {
   "Adds a new tag"
-  addTag(
-    "Mutation input"
-    input: AddTagInput!
-  ): AddTagPayload!
+  addTag("Mutation input" input: AddTagInput!): AddTagPayload!
 }

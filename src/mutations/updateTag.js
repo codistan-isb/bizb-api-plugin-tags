@@ -60,7 +60,8 @@ export default async function updateTag(context, input) {
     displayTitle: input.displayTitle,
     isVisible: input.isVisible,
     metafields: (metafields.length && metafields) || null,
-    featuredProductIds: input.featuredProductIds
+    featuredProductIds: input.featuredProductIds, 
+    description: input.description
   };
 
   if (typeof input.heroMediaUrl === "string" && input.heroMediaUrl.length) {
