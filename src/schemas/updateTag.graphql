@@ -1,4 +1,3 @@
-
 "Input for `updateTag` mutation"
 input UpdateTagInput {
   "An optional string identifying the mutation call, which will be returned in the response payload"
@@ -12,6 +11,9 @@ input UpdateTagInput {
 
   "Hero media URL"
   heroMediaUrl: String
+
+  "Image URL"
+  image: String
 
   "ID of rule to modify"
   id: ID!
@@ -30,7 +32,7 @@ input UpdateTagInput {
 
   "The tag slug. If left blank, the name will be slugified and saved as the slug"
   slug: String
-   "Tag description"
+  "Tag description"
   description: String
 }
 
@@ -45,8 +47,5 @@ type UpdateTagPayload {
 
 extend type Mutation {
   "Updates an existing tag"
-  updateTag(
-    "Mutation input"
-    input: UpdateTagInput!
-  ): UpdateTagPayload!
+  updateTag("Mutation input" input: UpdateTagInput!): UpdateTagPayload!
 }
