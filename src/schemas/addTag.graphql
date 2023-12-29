@@ -9,6 +9,9 @@ input AddTagInput {
   "Hero media URL"
   heroMediaUrl: String
 
+  "Image URL"
+  image: String
+
   "Whether the tag is visible"
   isVisible: Boolean!
 

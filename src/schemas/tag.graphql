@@ -15,6 +15,9 @@ type Tag implements Node & Deletable {
   "A string containing the hero image url for a Tag Listing Page"
   heroMediaUrl: String
 
+  "A string containing the Potrait image url for a Tag Listing Page"
+  image: String
+
   """
   If `true`, this object should be considered deleted. Soft deleted objects are not
   returned in query results unless you explicitly ask for them.
@@ -47,7 +50,7 @@ type Tag implements Node & Deletable {
 
   "The date and time at which this tag was last updated"
   updatedAt: DateTime!
-   "Tag description"
+  "Tag description"
   description: String
 }
 
@@ -55,7 +58,7 @@ extend type Query {
   "Returns a tag from a provided tag ID or slug. Tags with isVisible set to false are excluded by default."
   tag(
     "Slug or ID of Tag"
-    slugOrId: String!,
+    slugOrId: String!
 
     "The shop to which this tag belongs"
     shopId: ID!
