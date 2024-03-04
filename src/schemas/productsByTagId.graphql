@@ -11,6 +11,8 @@ type TagProduct {
 
   "The title of the product"
   title: String
+  "referenceId of the product"
+  referenceId: String
 }
 
 "A connection edge in which each node is a `TagProduct` object"
