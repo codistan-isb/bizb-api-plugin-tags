@@ -28,7 +28,7 @@ export default async function productsByTagId(_, params, context) {
   const shopId = decodeShopOpaqueId(opaqueShopId);
   const tagId = decodeTagOpaqueId(opaqueTagId);
 
-  return context.queries.productsByTagId(context, {
+    const result =context.queries.productsByTagId(context, {
     connectionArgs: {
       after,
       before,
@@ -40,4 +40,6 @@ export default async function productsByTagId(_, params, context) {
     tagId,
     query
   });
+  console.log("result", result);
+  return result;
 }
