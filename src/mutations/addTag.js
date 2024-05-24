@@ -13,7 +13,7 @@ import { Tag as TagSchema } from "../simpleSchemas.js"; // TODO: update schemas
  * @returns {Promise<Object>} AddTagPayload
  */
 export default async function addTag(context, input) {
-  const { shopId, name, isVisible, displayTitle, metafields, heroMediaUrl, slug: slugInput, description } = input;
+  const { shopId, name, isVisible, displayTitle, metafields, heroMediaUrl, slug: slugInput } = input;
   const { appEvents, collections } = context;
   const { Tags } = collections;
 
@@ -36,7 +36,7 @@ export default async function addTag(context, input) {
     displayTitle,
     heroMediaUrl,
     shopId,
-    description,
+    // description,
     createdAt: now,
     updatedAt: now
   };
